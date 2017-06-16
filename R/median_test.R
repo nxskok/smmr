@@ -4,7 +4,7 @@
 #' @param g vector of group memberships (same length as x)
 #' @return list of 2 objects: table, counts of values above and below the grand median in each group; value, test statistic, df and P-value
 #' 
-#' author Ken Butler, \email{butler@utsc.utoronto.ca}
+#' @author Ken Butler, \email{butler@utsc.utoronto.ca}
 #' 
 #' @examples
 #' median_test(mtcars$mpg,mtcars$cyl)
