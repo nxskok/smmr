@@ -13,8 +13,6 @@ median_test(x, g)
 }
 \value{
 list of 2 objects: table, counts of values above and below the grand median in each group; value, test statistic, df and P-value
-
-author Ken Butler, \email{butler@utsc.utoronto.ca}
 }
 \description{
 Mood's median test for comparison of group medians
@@ -22,4 +20,7 @@ Mood's median test for comparison of group medians
 \examples{
 median_test(mtcars$mpg,mtcars$cyl)
 
+}
+\author{
+Ken Butler, \email{butler@utsc.utoronto.ca}
 }

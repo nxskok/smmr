@@ -9,6 +9,8 @@
 #' @examples
 #' median_test(mtcars$mpg,mtcars$cyl)
 #' 
+#' @importFrom stats dbinom
+#' @importFrom stats median
 #' @export
 #' 
 median_test <-

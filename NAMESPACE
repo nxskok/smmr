@@ -2,3 +2,5 @@
 
 export(median_test)
 export(sign_test)
+importFrom(stats,dbinom)
+importFrom(stats,median)
