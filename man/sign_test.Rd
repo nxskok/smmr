@@ -20,6 +20,7 @@ Sign test for given median
 \examples{
 sign_test(3.5,1:10)
 sign_test(3,1:10)
+sign_test(25,mtcars$mpg)
 
 }
 \author{
