@@ -2,20 +2,20 @@
 % Please edit documentation in R/ci_median.R
 \name{ci_median}
 \alias{ci_median}
-\title{Confidence bnterval for median by inverting sign test}
+\title{Confidence interval for median by inverting sign test}
 \usage{
 ci_median(x, conf.level = 0.95)
 }
 \arguments{
 \item{x}{vector of data}
 
-\item{conf.level}{level for CI (as decimal), default 95%}
+\item{conf.level}{level for CI (as decimal), default 95 perent}
 }
 \value{
 lower and upper limits
 }
 \description{
-Confidence bnterval for median by inverting sign test
+Confidence interval for median by inverting sign test
 }
 \examples{
 ci_median(mtcars$mpg,0.90)
