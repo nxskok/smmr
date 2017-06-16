@@ -6,7 +6,7 @@
 #' 
 #' @author Ken Butler, \email{butler@utsc.utoronto.ca}
 #' 
-#' @examples add more below
+#' @examples
 #' median_test(mtcars$mpg,mtcars$cyl)
 #' 
 #' @export
