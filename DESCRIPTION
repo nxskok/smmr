@@ -1,10 +1,10 @@
 Package: smmr
 Type: Package
-Title: What the package does (short line)
+Title: Sign test and Mood's median test
 Version: 1.0
 Date: 2017-06-15
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Author: Ken Butler
+Maintainer: Ken Butler <butler@utsc.utoronto.ca>
+Description: Alternatives to t-test and two-sample t / ANOVA when normality is questionable
+License: GPL-2
 RoxygenNote: 6.0.1

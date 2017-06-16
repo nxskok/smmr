@@ -1,2 +1,2 @@
 # smmr
-sign test and Mood's median test
+Sign test and Mood's median test
