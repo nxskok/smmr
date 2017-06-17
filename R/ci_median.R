@@ -10,6 +10,9 @@
 #' ci_median(mtcars$mpg,0.90)
 #' ci_median(1:20)
 #' ci_median(1:5)
+#' 
+#' @importFrom purrr map_dbl
+#' 
 #'
 #' @export
 #' 
