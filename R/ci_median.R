@@ -23,7 +23,5 @@ ci_median=function(x,conf.level=0.95) {
   inside=(pv>=1-conf.level)
   first=min(which(inside))
   last=max(which(inside))
-  lims=c(y[first],y[last])
-  d=data.frame(y,pv)
-  list(d,lims)
+  c(y[first],y[last])
 }
