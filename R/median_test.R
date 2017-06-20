@@ -20,7 +20,7 @@ function(x,g) {
   d=data.frame(x,g)
   d=d[abs(x-m)>tol,]
   tab=with(d,table(group=g,below=(x<m)))
-  s=summary(tab)
+  s=summary(tab,correct=F)
   d=data.frame(what=c("statistic","df","P-value"),
                value=c(s$statistic,s$parameter,s$p.value))
   list(table=tab,test=d)
