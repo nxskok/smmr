@@ -18,7 +18,7 @@
 #' 
 ci_median=function(x,conf.level=0.95) {
   r=range(x)
-  y=seq(from=r[1]-1,to=r[2]+1,length.out = 3*length(x)) # "denser" than x
+  y=seq(from=r[1]-1,to=r[2]+1,length.out = 10*length(x)) # "denser" than x
   pv=purrr::map_dbl(y,pval_sign,x)
   inside=(pv>=1-conf.level)
   first=min(which(inside))
