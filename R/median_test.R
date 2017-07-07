@@ -14,7 +14,9 @@
 #' @export
 #' 
 median_test <-
-function(x,g) {
+function(xx,gg,data) {
+  x=data[,xx]
+  g=data[,gg]
   m=median(x)
   tol=1e-6
   d=data.frame(x,g)
