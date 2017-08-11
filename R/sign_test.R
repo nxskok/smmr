@@ -17,8 +17,17 @@
 #' 
 sign_test=function(d,x,med0=0,tol=1e-6) {
   x=enquo(x)
-  freqs= d %>% mutate(y=(!!x)-med0) %>% 
+  freqs_0= d %>% mutate(y=(!!x)-med0) %>% 
     filter(abs(y)>tol) %>% count(y>0) %>% pull(n)
+  if (length(freqs_0)==1) {
+    if(y[1]>0) {
+      freqs=c(0,freqs_0)
+    } else {
+      freqs=c(freqs_0,0)
+    }
+  } else {
+    freqs=freqs_0
+  }
   names(freqs)=c("below","above")
   stat=freqs[1]
   n=sum(freqs)

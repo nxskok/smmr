@@ -4,10 +4,12 @@
 \alias{pval_sign}
 \title{Two-sided P-value for sign test}
 \usage{
-pval_sign(med0, x)
+pval_sign(med0, d, x)
 }
 \arguments{
 \item{med0}{null median}
+
+\item{d}{data frame}
 
 \item{x}{vector of data for test}
 }
@@ -18,9 +20,10 @@ P-value of two-sided sign test for median
 Two-sided P-value for sign test
 }
 \examples{
-pval_sign(3.5,1:10)
-pval_sign(3,1:10)
-pval_sign(25,mtcars$mpg)
+d=data.frame(z=1:10)
+pval_sign(3.5,d,z)
+pval_sign(3,d,z)
+pval_sign(25,mtcars,mpg)
 
 }
 \author{
