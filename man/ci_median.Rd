@@ -4,7 +4,7 @@
 \alias{ci_median}
 \title{Confidence interval for median by inverting sign test}
 \usage{
-ci_median(d, x, conf.level = 0.95)
+ci_median(d, x, conf.level = 0.95, tol = 0.01)
 }
 \arguments{
 \item{d}{a data frame}
@@ -12,6 +12,8 @@ ci_median(d, x, conf.level = 0.95)
 \item{x}{unquoted name of column of data}
 
 \item{conf.level}{level for CI (as decimal), default 95 percent}
+
+\item{tol}{ends of CI determined to within this accuracy, default 0.01}
 }
 \value{
 lower and upper limits
