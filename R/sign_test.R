@@ -1,32 +1,31 @@
 #' Sign test for given median
 #' 
-#' @param med0 null median
-#' @param x vector of data for test
+#' @param d a data frame
+#' @param x unquoted name of column to test
+#' @param med0 null median (defaults to zero)
+#' @param tol (default 1e-6) how close a data value has to be to the null median to be considered equal to null median (and discarded)
 #' @return list of two elements: table of values above and below null median, data frame of 1-sided and 2-sided P-values
 #' 
 #' @author Ken Butler, \email{butler@utsc.utoronto.ca}
 #' @examples 
-#' sign_test(3.5,1:10)
-#' sign_test(3,1:10)
-#' sign_test(25,mtcars$mpg)
+#' d=data.frame(z=1:10)
+#' sign_test(d,z,3.5)
+#' sign_test(d,z,3)
+#' sign_test(mtcars,mpg,25)
 #' 
 #' @export
 #' 
-sign_test <-
-function(med0,x) {
-  # get rid of x's too close to med0
-  tol=1e-6
-  y=x-med0
-  y=y[abs(y)>tol] # take only values of y more than tol away from 0
-  y # +ve = above null median, -ve = below
-  tab=c(sum(y<0),sum(y>0))
-  names(tab)=c("below","above")
-  n=sum(tab)
-  stat=tab[1]
+sign_test=function(d,x,med0=0,tol=1e-6) {
+  x=enquo(x)
+  freqs= d %>% mutate(y=(!!x)-med0) %>% 
+    filter(abs(y)>tol) %>% count(y>0) %>% pull(n)
+  names(freqs)=c("below","above")
+  stat=freqs[1]
+  n=sum(freqs)
   p_upper=sum(dbinom(0:stat,n,0.5))
   p_lower=sum(dbinom(stat:n,n,0.5))
   p_two=2*min(p_lower,p_upper)
   nn=c("lower","upper","two-sided")
-  d=data.frame(alternative=nn,p_value=c(p_lower,p_upper,p_two))
-  list(above_below=tab,p_values=d)
+  out=data.frame(alternative=nn,p_value=c(p_lower,p_upper,p_two))
+  list(above_below=freqs,p_values=out)
 }

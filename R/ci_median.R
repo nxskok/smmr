@@ -1,7 +1,7 @@
 #' Confidence interval for median by inverting sign test
 #' 
 #' @param x vector of data 
-#' @param conf.level level for CI (as decimal), default 95 perent
+#' @param conf.level level for CI (as decimal), default 95 percent
 #' @return lower and upper limits
 #' 
 #' @author Ken Butler, \email{butler@utsc.utoronto.ca}

@@ -4,12 +4,16 @@
 \alias{sign_test}
 \title{Sign test for given median}
 \usage{
-sign_test(med0, x)
+sign_test(d, x, med0 = 0, tol = 1e-06)
 }
 \arguments{
-\item{med0}{null median}
+\item{d}{a data frame}
 
-\item{x}{vector of data for test}
+\item{x}{unquoted name of column to test}
+
+\item{med0}{null median (defaults to zero)}
+
+\item{tol}{(default 1e-6) how close a data value has to be to the null median to be considered equal to null median (and discarded)}
 }
 \value{
 list of two elements: table of values above and below null median, data frame of 1-sided and 2-sided P-values
@@ -18,9 +22,10 @@ list of two elements: table of values above and below null median, data frame of
 Sign test for given median
 }
 \examples{
-sign_test(3.5,1:10)
-sign_test(3,1:10)
-sign_test(25,mtcars$mpg)
+d=data.frame(z=1:10)
+sign_test(d,z,3.5)
+sign_test(d,z,3)
+sign_test(mtcars,mpg,25)
 
 }
 \author{

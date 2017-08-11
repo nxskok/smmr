@@ -9,7 +9,7 @@ ci_median(x, conf.level = 0.95)
 \arguments{
 \item{x}{vector of data}
 
-\item{conf.level}{level for CI (as decimal), default 95 perent}
+\item{conf.level}{level for CI (as decimal), default 95 percent}
 }
 \value{
 lower and upper limits
