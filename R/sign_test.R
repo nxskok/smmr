@@ -19,8 +19,9 @@ sign_test=function(d,x,med0=0,tol=1e-6) {
   x=enquo(x)
   freqs_0= d %>% mutate(y=(!!x)-med0) %>% 
     filter(abs(y)>tol) %>% count(y>0) %>% pull(n)
+  v = d %>% mutate(xx=(!!x)) %>% pull(xx)
   if (length(freqs_0)==1) {
-    if(y[1]>0) {
+    if(v[1]>med0) {
       freqs=c(0,freqs_0)
     } else {
       freqs=c(freqs_0,0)
