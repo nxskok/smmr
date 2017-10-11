@@ -1,23 +1,23 @@
 #' Sign test (simplified) for given median
 #' 
-#' @param x column to test
+#' @param x vector of data
 #' @param med0 null median (defaults to zero)
 #' @param tol (default 1e-6) how close a data value has to be to the null median to be considered equal to null median (and discarded)
 #' @return list of two elements: table of values above and below null median, data frame of 1-sided and 2-sided P-values
 #' 
 #' @author Ken Butler, \email{butler@utsc.utoronto.ca}
 #' @examples 
-#' sign_test2(1:10,3.5)
-#' sign_test2(1:10,3)
-#' sign_test2(mtcars$mpg,25)
+#' sign_test0(1:10,3.5)
+#' sign_test0(1:10,3)
+#' sign_test0(mtcars$mpg,25)
 #' 
 #' @export
 #' 
-sign_test2=function(x,med0=0,tol=1e-6) {
+sign_test0=function(x,med0=0,tol=1e-6) {
   d=tibble(x=x)
   freqs_0= d %>% mutate(y=x-med0) %>% 
     filter(abs(y)>tol) %>% count(y>0) %>% pull(n)
-  v = d %>% mutate(xx=(!!x)) %>% pull(xx)
+  v = x
   if (length(freqs_0)==1) {
     if(v[1]>med0) {
       freqs=c(0,freqs_0)
