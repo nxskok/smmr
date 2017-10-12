@@ -14,9 +14,10 @@
 #' @export
 #' 
 sign_test0=function(x,med0=0,tol=1e-6) {
-  d=tibble(x=x)
-  freqs_0= d %>% mutate(y=x-med0) %>% 
-    filter(abs(y)>tol) %>% count(y>0) %>% pull(n)
+  d=data.frame(x=x)
+  d %>% mutate(y=x-med0) %>% 
+    filter(abs(y)>tol) %>% count(y>0) -> tab
+  freqs_0=tab$n
   v = x
   if (length(freqs_0)==1) {
     if(v[1]>med0) {
