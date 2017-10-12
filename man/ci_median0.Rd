@@ -4,7 +4,7 @@
 \alias{ci_median0}
 \title{Confidence interval for median by inverting sign test}
 \usage{
-ci_median0(x, conf.level = 0.95)
+ci_median0(x, conf.level = 0.95, tol = 0.01)
 }
 \arguments{
 \item{x}{vector of data}

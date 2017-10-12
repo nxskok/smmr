@@ -17,19 +17,38 @@
 #'
 #' @export
 #' 
-ci_median0=function(x,conf.level=0.95) {
+ci_median0=function(x,conf.level=0.95,tol=0.01) {
   r=range(x)
-  xx=sort(unique(x))
-  y1=c(r[1]-1,xx)
-  y2=c(xx,r[2]+1)
-  betweens=(y1+y2)/2
-  y=sort(c(xx,betweens))
-  d=data.frame(xname=x)
-  pv=purrr::map_dbl(y,pval_sign,d,xname)
-  inside=(pv>=1-conf.level)
-  first=min(which(inside))
-  last=max(which(inside))
-  c(y[first],y[last])
+  below=r[1]-1
+  mid=median(x)
+  above=r[2]+1
+  # first bisection
+  lo=below
+  hi=mid
+  while(hi-lo>tol) {
+    try=(hi+lo)/2
+    ptry=pval_sign0(try,x)
+    if (ptry<1-conf.level) {
+      lo=try 
+    } else {
+      hi=try
+    }
+  }
+  ci_lo=hi
+  # second bisection
+  lo=mid
+  hi=above
+  while(hi-lo>tol) {
+    try=(hi+lo)/2
+    ptry=pval_sign0(try,x)
+    if (ptry<1-conf.level) {
+      hi=try 
+    } else {
+      lo=try
+    }
+  }
+  ci_hi=lo
+  c(ci_lo,ci_hi)
 }
 
 #' Confidence interval for median by inverting sign test
