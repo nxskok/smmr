@@ -1,0 +1,58 @@
+---
+title: "testing pairwise median test"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+library(smmr)
+```
+
+
+test data frame
+
+```{r}
+d=tibble(g=factor(c("a","a","b","b","c","c")),x=10:15)
+d
+```
+
+```{r}
+median_test(d,x,g)
+```
+
+works, as it should
+
+```{r}
+pairwise_median_test(d,x,g)
+```
+
+NaNs
+
+```{r}
+median_test_pair(d,x,g,"a","b")
+```
+
+problem is that g as a factor has *three* levels even if you only look at two of them
+
+```{r}
+d %>% filter(g=="a" | g=="b") %>% 
+  median_test(x, g) 
+```
+
+and this kills chisq.test
+
+```{r}
+d %>% filter(g=="a" | g=="b") %>% 
+  median_test(x, as.character(g)) 
+
+```
+
+that cracks it
+
+did the function get updated?
+
+```{r}
+median_test_pair
+```
+
+no

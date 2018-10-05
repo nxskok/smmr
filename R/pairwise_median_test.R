@@ -63,7 +63,7 @@ median_test_pair = function(d,x,g,g1,g2,tol=1e-6) {
   x=enquo(x)
   g=enquo(g)
   d %>% filter(!!g==g1 | !!g==g2) %>% 
-    median_test(!!x, !!g) ->
+    median_test(!!x, !!as.character(g)) ->
   test_results
   test_results$test %>% pluck("value",3)
 }
