@@ -1710,6 +1710,12 @@ library(smmr)</code></pre>
 <p>test data frame</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucm0oZCk7IHJtKGcpXG5gYGAifQ== -->
+<pre class="r"><code>rm(d); rm(g)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoib2JqZWN0ICdnJyBub3QgZm91bmRcbiJ9 -->
+<pre><code>object 'g' not found</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZD10aWJibGUoZz1mYWN0b3IoYyhcImFcIixcImFcIixcImJcIixcImJcIixcImNcIixcImNcIikpLHg9MTA6MTUpXG5kXG5gYGAifQ== -->
 <pre class="r"><code>d=tibble(g=factor(c(&quot;a&quot;,&quot;a&quot;,&quot;b&quot;,&quot;b&quot;,&quot;c&quot;,&quot;c&quot;)),x=10:15)
 d</code></pre>
@@ -1725,8 +1731,8 @@ d</code></pre>
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubWVkaWFuX3Rlc3QoZCx4LGcpXG5gYGAifQ== -->
-<pre class="r"><code>median_test(d,x,g)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc21tcjo6bWVkaWFuX3Rlc3QoZCx4LGcpXG5gYGAifQ== -->
+<pre class="r"><code>smmr::median_test(d,x,g)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiJHRhYmxlXG4gICAgIGFib3ZlXG5ncm91cCBhYm92ZSBiZWxvd1xuICAgIGEgICAgIDAgICAgIDJcbiAgICBiICAgICAxICAgICAxXG4gICAgYyAgICAgMiAgICAgMFxuXG4kdGVzdFxuIn0= -->
 <pre><code>$table
@@ -1753,13 +1759,13 @@ $test</code></pre>
 <p>works, as it should</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGFpcndpc2VfbWVkaWFuX3Rlc3QoZCx4LGcpXG5gYGAifQ== -->
-<pre class="r"><code>pairwise_median_test(d,x,g)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc21tcjo6cGFpcndpc2VfbWVkaWFuX3Rlc3QoZCx4LGcpXG5gYGAifQ== -->
+<pre class="r"><code>smmr::pairwise_median_test(d,x,g)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6NCwibnJvdyI6M30sInJkZiI6Ikg0c0lBQUFBQUFBQUE0MVNRVTdETUJEYzJBbFZneWhJdktPUnFIZ0NMK0RVVytVbWJrbHI3Q2h4Q2pkNE5oY2Exckczb2hZQ0lzVTdIcTluTTd0NWZGZ3U4bVVPQUF4NGxnRGpDRk9HU3dJcFRGMThCZUMzanNWNGhaR1BoLzVsVWZLRmtnZXBPa1EzWTJhUUVBVFdCTXJvWWxZcTBkRzlrOXBHbE5hMGlJN2Zhck1RdVpkZ3c3K3I4ZUczQWpCekltOGZNRDV4L1B2OHh3cDVKYXdvTnExNGxyRmpqUnc1VGdQSnRuY250QWhvMHF3T1F2VXliQzlGdFZzUmRTNDViYzFMUWJLdVhld2RsMkVZUHIzRHMrU0phV3h0TktZeU45MHMrdkNrallqclhqdnBhbDQrOVhvL3YzZm13bDhBb1Z3U0prTTQ5U1ZUYWtwR2JaZDZXMnN5bENteGxpcHNabWhoZEZBMGJhMHRkUkhacnJER0NzckxTNk9JOGRNN2ZnRTFRRmJVeXdJQUFBPT0ifQ== -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6NCwibnJvdyI6M30sInJkZiI6Ikg0c0lBQUFBQUFBQUE0MVNzVTdETUJDOTJBbFZneWhJREh4RkkxR3hzN0FoTVRCMXE5ekViUVBHamhLbmRFUjhDZ3Zmd2NqRWlzUzMwTlJPZkJHMUJHS0k3L241L0M3dnpyZFgwMGs4alFHQUFJMENJTlRBa0pnbGdCQ0dObTRBNktsbFRUd3lrYmFIM1VlODVBUEIxMXhVQnAyMG1VNkNJWmdqU0wyTFVTcFloZmQ2dFFWTHRTb04ydjZvVFZ5a25RUnAvbDJOTm44VmdKRVZ1WHk5L25oKy8xejVzVDkvMjN5OW5NMXYvUGhMaFRoam1pV0xrajF3MzdFMEhEb09IVW1XNXoyYU9EUW9abXNtYXU2Mmh5eTdteUcxTHprczFXT0NzclpkNU1rc1RkTjhkdzcza2dlcTBMbVNKcFhZNlViZWp3ZWxSeHpYMGtwbjQzUlZ5L3Z4aFRYblhnRzRjb0diRE9Ld0t4bGlVeUpzTzVmTFhLS2hTTEE1RjI0ek1oWmFCMGxSNWxKakZ3MWJKVnBwaG5seHFnUXkzZlMyTzhIY0l6bkxBZ0FBIn0= -->
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
-{"columns":[{"label":["g1"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["g2"],"name":[2],"type":["fctr"],"align":["left"]},{"label":["p_value"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["adj_p_value"],"name":[4],"type":["dbl"],"align":["right"]}],"data":[{"1":"a","2":"b","3":"NaN","4":"NaN"},{"1":"a","2":"c","3":"NaN","4":"NaN"},{"1":"b","2":"c","3":"NaN","4":"NaN"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[3]},"pages":{}}}
+{"columns":[{"label":["g1"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["g2"],"name":[2],"type":["fctr"],"align":["left"]},{"label":["p_value"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["adj_p_value"],"name":[4],"type":["dbl"],"align":["right"]}],"data":[{"1":"a","2":"b","3":"0.04550026","4":"0.1365008"},{"1":"a","2":"c","3":"0.04550026","4":"0.1365008"},{"1":"b","2":"c","3":"0.04550026","4":"0.1365008"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[3]},"pages":{}}}
   </script>
 </div>
 <!-- rnb-frame-end -->
@@ -1768,8 +1774,8 @@ $test</code></pre>
 <p>NaNs</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubWVkaWFuX3Rlc3RfcGFpcihkLHgsZyxcImFcIixcImJcIilcbmBgYCJ9 -->
-<pre class="r"><code>median_test_pair(d,x,g,&quot;a&quot;,&quot;b&quot;)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc21tcjo6bWVkaWFuX3Rlc3RfcGFpcihkLHgsZyxcImFcIixcImNcIilcbmBgYCJ9 -->
+<pre class="r"><code>smmr::median_test_pair(d,x,g,&quot;a&quot;,&quot;c&quot;)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiWzFdIE5hTlxuIn0= -->
 <pre><code>[1] NaN</code></pre>
@@ -1779,17 +1785,17 @@ $test</code></pre>
 <p>problem is that g as a factor has <em>three</em> levels even if you only look at two of them</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZCAlPiUgZmlsdGVyKGc9PVwiYVwiIHwgZz09XCJiXCIpICU+JSBcbiAgbWVkaWFuX3Rlc3QoeCwgZykgXG5gYGAifQ== -->
-<pre class="r"><code>d %&gt;% filter(g==&quot;a&quot; | g==&quot;b&quot;) %&gt;% 
-  median_test(x, g) </code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZCAlPiUgZmlsdGVyKGc9PVwiYVwiIHwgZz09XCJjXCIpICU+JSBcbiAgc21tcjo6bWVkaWFuX3Rlc3QoeCwgZykgXG5gYGAifQ== -->
+<pre class="r"><code>d %&gt;% filter(g==&quot;a&quot; | g==&quot;c&quot;) %&gt;% 
+  smmr::median_test(x, g) </code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiJHRhYmxlXG4gICAgIGFib3ZlXG5ncm91cCBhYm92ZSBiZWxvd1xuICAgIGEgICAgIDAgICAgIDJcbiAgICBiICAgICAyICAgICAwXG4gICAgYyAgICAgMCAgICAgMFxuXG4kdGVzdFxuIn0= -->
+<!-- rnb-output-begin eyJkYXRhIjoiJHRhYmxlXG4gICAgIGFib3ZlXG5ncm91cCBhYm92ZSBiZWxvd1xuICAgIGEgICAgIDAgICAgIDJcbiAgICBiICAgICAwICAgICAwXG4gICAgYyAgICAgMiAgICAgMFxuXG4kdGVzdFxuIn0= -->
 <pre><code>$table
      above
 group above below
     a     0     2
-    b     2     0
-    c     0     0
+    b     0     0
+    c     2     0
 
 $test</code></pre>
 <!-- rnb-output-end -->
@@ -1797,6 +1803,51 @@ $test</code></pre>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":["what"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["value"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"statistic","2":"NaN"},{"1":"df","2":"2"},{"1":"P-value","2":"NaN"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[3]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiTkFcbiJ9 -->
+<pre><code>NA</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>delve</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZCAlPiUgZmlsdGVyKGc9PVwiYVwiIHwgZz09XCJiXCIpICU+JSBcbiAgc21tcjo6bWVkaWFuX3Rlc3QoeCwgZykgLT4gYW5zXG5zdW1tYXJ5KGFucyR0YWJsZSlcbmBgYCJ9 -->
+<pre class="r"><code>d %&gt;% filter(g==&quot;a&quot; | g==&quot;b&quot;) %&gt;% 
+  smmr::median_test(x, g) -&gt; ans
+summary(ans$table)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiTnVtYmVyIG9mIGNhc2VzIGluIHRhYmxlOiA0IFxuTnVtYmVyIG9mIGZhY3RvcnM6IDIgXG5UZXN0IGZvciBpbmRlcGVuZGVuY2Ugb2YgYWxsIGZhY3RvcnM6XG5cdENoaXNxID0gTmFOLCBkZiA9IDIsIHAtdmFsdWUgPSBOQVxuXHRDaGktc3F1YXJlZCBhcHByb3hpbWF0aW9uIG1heSBiZSBpbmNvcnJlY3RcbiJ9 -->
+<pre><code>Number of cases in table: 4 
+Number of factors: 2 
+Test for independence of all factors:
+    Chisq = NaN, df = 2, p-value = NA
+    Chi-squared approximation may be incorrect</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZCAlPiUgbXV0YXRlKGdnPWFzLmNoYXJhY3RlcihnKSkgJT4lIFxuICBmaWx0ZXIoZ2c9PVwiYVwiIHwgZ2c9PVwiYlwiKSAlPiUgXG4gIG1lZGlhbl90ZXN0KHgsIGdnKVxuYGBgIn0= -->
+<pre class="r"><code>d %&gt;% mutate(gg=as.character(g)) %&gt;% 
+  filter(gg==&quot;a&quot; | gg==&quot;b&quot;) %&gt;% 
+  median_test(x, gg)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiJHRhYmxlXG4gICAgIGFib3ZlXG5ncm91cCBhYm92ZSBiZWxvd1xuICAgIGEgICAgIDAgICAgIDJcbiAgICBiICAgICAyICAgICAwXG5cbiR0ZXN0XG4ifQ== -->
+<pre><code>$table
+     above
+group above below
+    a     0     2
+    b     2     0
+
+$test</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6MiwibnJvdyI6M30sInJkZiI6Ikg0c0lBQUFBQUFBQUExMVJPMDdFTUJBZDJ3bXJSR0pCNGh4SlFiVWRGSFEwaUdwYmt6Z2t3bXV2RW1lWEVuRVp6a0pGeXpFNHdjSTQ5aUFsa1p3WlA3OTU4M3U4MjE3bjJ4d0FPSWlVQVJmb0poeC9EQkxJdkgwRkVGY1RBY1E1V2hFUEM5aU1mS2JWUWVrQnZjdUpGVkJlTjlGYlBSUUhxVWNWcjluZ3BPc0cxMVVMbmJUU2NpQ1pmL0ZHVnM3MjZKM3dySDJDVy8rTzM4MVB0Qi8zWCsrZjMrMVN6c2lkSWprZXdlVFlTa2VFVU5VOEt1dnRzYVJJM3psL0MxbEVJSXJmUllGNUxaMHNteDVEUXBFenVaWGR1ODRhRk9OK25Pa2ltUFVMNEdJMFBubGRWTzFvWG9xTlR4REhEckVnRmxkQmZseEhRb1dsTkRsbG5qdERVMCsxZkZJNlh0Ylk1TlJqdWU4N1EvUElFUjFLWjUwa1hsNVpUVWhZd09rUGJBMElJVHdDQUFBPSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["what"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["value"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"statistic","2":"4.00000000"},{"1":"df","2":"1.00000000"},{"1":"P-value","2":"0.04550026"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[3]},"pages":{}}}
   </script>
 </div>
 <!-- rnb-frame-end -->
@@ -1821,7 +1872,7 @@ group above below
 
 $test</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6MiwibnJvdyI6M30sInJkZiI6Ikg0c0lBQUFBQUFBQUExMVJPMDdFTUJBZDJ3bXJSR0pCNGh4SlFiTWxGSFEwaUdwYmt6Z2t3bXV2RW1lWEVuRVp6a0pGeXpFNHdjSTQ5aUFsa1p3WlA3OTU4M3U4MjE3bjJ4d0FPSWlVQVJmb0poeC9EQkxJdkgwRkVGY1RBY1E1V2hFUEM5aU1mS2JWUWVrQnZjdUpGVkJlTjlGYlBSUUhxVWNWcjluZ3BPc0cxMVVMbmJUU2NpQ1pmL0ZHVnM3MjZKM3dySDJDVy8rTzM4MVB0Qi8zWCsrZjMrMVN6c2lkSWprZXdlVFlTa2VFVU5VOEt1dnRzYVJJM3psL0MxbEVJSXJmUllGNUxaMHNteDVEUXBFenVaWGR1ODRhRk9OK25Pa2ltUFVMNEdJMFBubGRWTzFvWG9xTlR4REhEckVnRmxkQmZseEhRb1dsTkRsbG5qdERVMCsxZkZJNlh0Ylk1TlJqdWU4N1EvUElFUjFLWjUwa1hsNVpUVWhZd09rUFVmandmandDQUFBPSJ9 -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6MiwibnJvdyI6M30sInJkZiI6Ikg0c0lBQUFBQUFBQUExMVJPMDdFTUJBZDJ3bXJSR0pCNGh4SlFiY1ZGSFEwaUdwYmt6Z2t3bXV2RW1lWEVuRVp6a0pGeXpFNHdjSTQ5aUFsa1p3WlA3OTU4M3U4MjE3bjJ4d0FPSWlVQVJmb0poeC9EQkxJdkgwRkVGY1RBY1E1V2hFUEM5aU1mS2JWUWVrQnZjdUpGVkJlTjlGYlBSUUhxVWNWcjluZ3BPc0cxMVVMbmJUU2NpQ1pmL0ZHVnM3MjZKM3dySDJDVy8rTzM4MVB0Qi8zWCsrZjMrMVN6c2lkSWprZXdlVFlTa2VFVU5VOEt1dnRzYVJJM3psL0MxbEVJSXJmUllGNUxaMHNteDVEUXBFenVaWGR1ODRhRk9OK25Pa2ltUFVMNEdJMFBubGRWTzFvWG9xTlR4REhEckVnRmxkQmZseEhRb1dsTkRsbG5qdERVMCsxZkZJNlh0Ylk1TlJqdWU4N1EvUElFUjFLWjUwa1hsNVpUVWhZd09rUFRpOVdRandDQUFBPSJ9 -->
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":["what"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["value"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"statistic","2":"4.00000000"},{"1":"df","2":"1.00000000"},{"1":"P-value","2":"0.04550026"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[3]},"pages":{}}}
@@ -1837,11 +1888,10 @@ $test</code></pre>
 <p>did the function get updated?</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubWVkaWFuX3Rlc3RfcGFpclxuXG5gYGAifQ== -->
-<pre class="r"><code>median_test_pair
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc21tcjo6bWVkaWFuX3Rlc3RfcGFpclxuYGBgIn0= -->
+<pre class="r"><code>smmr::median_test_pair</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiZnVuY3Rpb24oZCx4LGcsZzEsZzIsdG9sPTFlLTYpIHtcbiAgeD1lbnF1byh4KVxuICBnPWVucXVvKGcpXG4gIGQgJT4lIGZpbHRlcighIWc9PWcxIHwgISFnPT1nMikgJT4lIFxuICAgIG1lZGlhbl90ZXN0KCEheCwgISFnKSAtPlxuICB0ZXN0X3Jlc3VsdHNcbiAgdGVzdF9yZXN1bHRzJHRlc3QgJT4lIHBsdWNrKFwidmFsdWVcIiwzKVxufVxuPGJ5dGVjb2RlOiAweDVkNjM5YTA+XG4ifQ== -->
+<!-- rnb-output-begin eyJkYXRhIjoiZnVuY3Rpb24oZCx4LGcsZzEsZzIsdG9sPTFlLTYpIHtcbiAgeD1lbnF1byh4KVxuICBnPWVucXVvKGcpXG4gIGQgJT4lIGZpbHRlcighIWc9PWcxIHwgISFnPT1nMikgJT4lIFxuICAgIG1lZGlhbl90ZXN0KCEheCwgISFnKSAtPlxuICB0ZXN0X3Jlc3VsdHNcbiAgdGVzdF9yZXN1bHRzJHRlc3QgJT4lIHBsdWNrKFwidmFsdWVcIiwzKVxufVxuPGJ5dGVjb2RlOiAweDk0MWJlYTg+XG48ZW52aXJvbm1lbnQ6IG5hbWVzcGFjZTpzbW1yPlxuIn0= -->
 <pre><code>function(d,x,g,g1,g2,tol=1e-6) {
   x=enquo(x)
   g=enquo(g)
@@ -1850,14 +1900,15 @@ $test</code></pre>
   test_results
   test_results$test %&gt;% pluck(&quot;value&quot;,3)
 }
-&lt;bytecode: 0x5d639a0&gt;</code></pre>
+&lt;bytecode: 0x941bea8&gt;
+&lt;environment: namespace:smmr&gt;</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>no</p>
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAidGVzdGluZyBwYWlyd2lzZSBtZWRpYW4gdGVzdCIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKYGBge3J9CmxpYnJhcnkodGlkeXZlcnNlKQpsaWJyYXJ5KHNtbXIpCmBgYAoKCnRlc3QgZGF0YSBmcmFtZQoKYGBge3J9CmQ9dGliYmxlKGc9ZmFjdG9yKGMoImEiLCJhIiwiYiIsImIiLCJjIiwiYyIpKSx4PTEwOjE1KQpkCmBgYAoKYGBge3J9Cm1lZGlhbl90ZXN0KGQseCxnKQpgYGAKCndvcmtzLCBhcyBpdCBzaG91bGQKCmBgYHtyfQpwYWlyd2lzZV9tZWRpYW5fdGVzdChkLHgsZykKYGBgCgpOYU5zCgpgYGB7cn0KbWVkaWFuX3Rlc3RfcGFpcihkLHgsZywiYSIsImIiKQpgYGAKCnByb2JsZW0gaXMgdGhhdCBnIGFzIGEgZmFjdG9yIGhhcyAqdGhyZWUqIGxldmVscyBldmVuIGlmIHlvdSBvbmx5IGxvb2sgYXQgdHdvIG9mIHRoZW0KCmBgYHtyfQpkICU+JSBmaWx0ZXIoZz09ImEiIHwgZz09ImIiKSAlPiUgCiAgbWVkaWFuX3Rlc3QoeCwgZykgCmBgYAoKYW5kIHRoaXMga2lsbHMgY2hpc3EudGVzdAoKYGBge3J9CmQgJT4lIGZpbHRlcihnPT0iYSIgfCBnPT0iYiIpICU+JSAKICBtZWRpYW5fdGVzdCh4LCBhcy5jaGFyYWN0ZXIoZykpIAoKYGBgCgp0aGF0IGNyYWNrcyBpdAoKZGlkIHRoZSBmdW5jdGlvbiBnZXQgdXBkYXRlZD8KCmBgYHtyfQptZWRpYW5fdGVzdF9wYWlyCmBgYAoKbm8=</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAidGVzdGluZyBwYWlyd2lzZSBtZWRpYW4gdGVzdCIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKYGBge3J9CmxpYnJhcnkodGlkeXZlcnNlKQpsaWJyYXJ5KHNtbXIpCmBgYAoKCnRlc3QgZGF0YSBmcmFtZQoKYGBge3J9CnJtKGQpOyBybShnKQpkPXRpYmJsZShnPWZhY3RvcihjKCJhIiwiYSIsImIiLCJiIiwiYyIsImMiKSkseD0xMDoxNSkKZApgYGAKCmBgYHtyfQpzbW1yOjptZWRpYW5fdGVzdChkLHgsZykKYGBgCgp3b3JrcywgYXMgaXQgc2hvdWxkCgpgYGB7cn0Kc21tcjo6cGFpcndpc2VfbWVkaWFuX3Rlc3QoZCx4LGcpCmBgYAoKTmFOcwoKYGBge3J9CnNtbXI6Om1lZGlhbl90ZXN0X3BhaXIoZCx4LGcsImEiLCJjIikKYGBgCgpwcm9ibGVtIGlzIHRoYXQgZyBhcyBhIGZhY3RvciBoYXMgKnRocmVlKiBsZXZlbHMgZXZlbiBpZiB5b3Ugb25seSBsb29rIGF0IHR3byBvZiB0aGVtCgpgYGB7cn0KZCAlPiUgZmlsdGVyKGc9PSJhIiB8IGc9PSJjIikgJT4lIAogIHNtbXI6Om1lZGlhbl90ZXN0KHgsIGcpIApgYGAKCmRlbHZlCgpgYGB7cn0KZCAlPiUgZmlsdGVyKGc9PSJhIiB8IGc9PSJiIikgJT4lIAogIHNtbXI6Om1lZGlhbl90ZXN0KHgsIGcpIC0+IGFucwpzdW1tYXJ5KGFucyR0YWJsZSkKYGBgCgpgYGB7cn0KZCAlPiUgbXV0YXRlKGdnPWFzLmNoYXJhY3RlcihnKSkgJT4lIAogIGZpbHRlcihnZz09ImEiIHwgZ2c9PSJiIikgJT4lIAogIG1lZGlhbl90ZXN0KHgsIGdnKQpgYGAKCgoKCmFuZCB0aGlzIGtpbGxzIGNoaXNxLnRlc3QKCmBgYHtyfQpkICU+JSBmaWx0ZXIoZz09ImEiIHwgZz09ImIiKSAlPiUgCiAgbWVkaWFuX3Rlc3QoeCwgYXMuY2hhcmFjdGVyKGcpKSAKCmBgYAoKdGhhdCBjcmFja3MgaXQKCmRpZCB0aGUgZnVuY3Rpb24gZ2V0IHVwZGF0ZWQ/CgpgYGB7cn0Kc21tcjo6bWVkaWFuX3Rlc3RfcGFpcgpgYGAKCm5v</div>
 
 
 

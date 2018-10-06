@@ -28,7 +28,7 @@ pairwise_median_test <-
     n=length(distinct_groups)
     n_pair=n*(n-1)/2
     combos %>% 
-      mutate(p_value=map2_dbl(g1,g2,~median_test_pair(d,!!x,!!g,.x,.y))) %>% 
+      mutate(p_value=map2_dbl(g1,g2,~median_test_pair(d,!!x,as.character(!!g),.x,.y))) %>% 
       mutate(adj_p_value=p_value*n_pair)
     # 
     # grand_median= d %>% summarize(med=median(!!x)) %>% pull(med)
@@ -63,7 +63,7 @@ median_test_pair = function(d,x,g,g1,g2,tol=1e-6) {
   x=enquo(x)
   g=enquo(g)
   d %>% filter(!!g==g1 | !!g==g2) %>% 
-    median_test(!!x, !!as.character(g)) ->
+    median_test(!!x, !!g) ->
   test_results
   test_results$test %>% pluck("value",3)
 }
