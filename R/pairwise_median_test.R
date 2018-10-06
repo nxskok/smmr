@@ -2,7 +2,7 @@
 #' 
 #' @param d a data frame
 #' @param x unquoted name of quantitative variable
-#' @param g unquoted name of grouping variable
+#' @param g unquoted name of grouping variable (can be a factor, is treated as text)
 #' @param tol (default 1e-6) any data values closer to overall median than this are discarded
 #' @return data frame of groups being compared and unadjusted and Bonferroni-adjusted P-values 
 #' 
@@ -45,7 +45,7 @@ pairwise_median_test <-
 #' 
 #' @param d a data frame
 #' @param x unquoted name of quantitative variable
-#' @param g unquoted name of grouping variable
+#' @param g unquoted name of grouping variable (as character, not a factor)
 #' @param g1 first group to compare (as text)
 #' @param g2 second group to compare (as text)
 #' @param tol (default 1e-6) any data values closer to overall median than this are discarded
