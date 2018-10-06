@@ -11,7 +11,7 @@ median_test_pair(d, x, g, g1, g2, tol = 1e-06)
 
 \item{x}{unquoted name of quantitative variable}
 
-\item{g}{unquoted name of grouping variable}
+\item{g}{unquoted name of grouping variable (as character, not a factor)}
 
 \item{g1}{first group to compare (as text)}
 

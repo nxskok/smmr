@@ -11,7 +11,7 @@ pairwise_median_test(d, x, g, tol = 1e-06)
 
 \item{x}{unquoted name of quantitative variable}
 
-\item{g}{unquoted name of grouping variable}
+\item{g}{unquoted name of grouping variable (can be a factor, is treated as text)}
 
 \item{tol}{(default 1e-6) any data values closer to overall median than this are discarded}
 }
