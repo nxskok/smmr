@@ -29,7 +29,7 @@ pairwise_median_test <-
     n_pair=n*(n-1)/2
     combos %>% 
       mutate(p_value=map2_dbl(g1,g2,~median_test_pair(d,!!x,as.character(!!g),.x,.y))) %>% 
-      mutate(adj_p_value=p_value*n_pair)
+      mutate(adj_p_value=pmax(p_value*n_pair, 1))
     # 
     # grand_median= d %>% summarize(med=median(!!x)) %>% pull(med)
     # tbl = d %>% mutate(y=(!!x)-grand_median) %>% 
