@@ -1,7 +1,7 @@
 Package: smmr
 Type: Package
 Title: Sign test and Mood's median test
-Version: 1.0
+Version: 1.0.1
 Date: 2017-06-15
 Author: Ken Butler
 Maintainer: Ken Butler <butler@utsc.utoronto.ca>
