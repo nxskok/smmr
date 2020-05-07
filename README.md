@@ -83,6 +83,10 @@ ci_median(mtcars, disp)
 The null median of 150 that we failed to reject is (predictably) inside
 this confidence interval.
 
+The sign test and its corresponding confidence interval can also be used
+with matched-pair data, by applying them to the one sample of
+differences, testing a null median difference of zero.
+
 ## Comparing two or more than two medians
 
 To compare several medians (testing the null hypothesis that they are
@@ -127,3 +131,13 @@ of values above and below in the output for `median_test` reveals that
 all 11 of the 4-cylinder cars have a `disp` less than the median of all
 the cars, while all 14 of the 8-cylinder cars have a `disp` value
 *greater* than this overall median.
+
+## Comment
+
+The sign test and Mood’s median test are often derided as lacking power
+compared to the signed rank, rank-sum and Kruskal-Wallis tests. However,
+the latter three tests come with extra assumptions: the signed-rank test
+assumes a symmetric distribution, and the other two tests assume equal
+spreads among the groups. When we have doubts about using a t-test or an
+ANOVA, we may well doubt these assumptions as well, and I think it is
+better to use a test that does not make these assumptions at all.
