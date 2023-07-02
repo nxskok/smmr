@@ -2,7 +2,7 @@
 #' 
 #' @param x vector of data
 #' @param g vector of group memberships (same length as x)
-#' @return list of 2 objects: table, counts of values above and below the grand median in each group; value, test statistic, df and P-value
+#' @return list of 3 objects: grand median of all obs, table, counts of values above and below the grand median in each group; value, test statistic, df and P-value
 #' 
 #' @author Ken Butler, \email{butler@utsc.utoronto.ca}
 #' 
@@ -57,5 +57,5 @@ median_test <-
     s=summary(tab,correct=F)
     d=data.frame(what=c("statistic","df","P-value"),
                  value=c(s$statistic,s$parameter,s$p.value))
-    list(table=tab,test=d)
+    list(grand_median = grand_median, table=tab, test=d)
   }
