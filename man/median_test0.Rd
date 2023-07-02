@@ -12,7 +12,7 @@ median_test0(x, g)
 \item{g}{vector of group memberships (same length as x)}
 }
 \value{
-list of 2 objects: table, counts of values above and below the grand median in each group; value, test statistic, df and P-value
+list of 3 objects: grand median of all obs, table, counts of values above and below the grand median in each group; value, test statistic, df and P-value
 }
 \description{
 Mood's median test for comparison of group medians
