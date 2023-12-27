@@ -18,8 +18,6 @@ lower and upper limits
 Confidence interval for median by inverting sign test
 }
 \examples{
-ci_median0(mtcars$mpg)
-ci_median0(mtcars$mpg,0.80)
 ci_median0(1:20)
 ci_median0(1:5)
 

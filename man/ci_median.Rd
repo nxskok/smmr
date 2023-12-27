@@ -22,8 +22,6 @@ lower and upper limits
 Confidence interval for median by inverting sign test
 }
 \examples{
-ci_median(mtcars,mpg)
-ci_median(mtcars,mpg,0.80)
 d=data.frame(z=1:20)
 d1=data.frame(z=1:5)
 ci_median(d,z)

@@ -11,6 +11,7 @@
 #' sign_test0(1:10,3)
 #' sign_test0(mtcars$mpg,25)
 #' 
+#' @importFrom datasets mtcars
 #' @export
 #' 
 sign_test0=function(x,med0=0,tol=1e-6) {

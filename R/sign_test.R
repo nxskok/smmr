@@ -12,7 +12,8 @@
 #' sign_test(d,z,3.5)
 #' sign_test(d,z,3)
 #' sign_test(mtcars,mpg,25)
-#' 
+#' @importFrom datasets mtcars
+#' @importFrom rlang enquo
 #' @export
 #' 
 sign_test=function(d,x,med0=0,tol=1e-6) {

@@ -7,8 +7,6 @@
 #' @author Ken Butler, \email{butler@utsc.utoronto.ca}
 #' 
 #' @examples 
-#' ci_median0(mtcars$mpg)
-#' ci_median0(mtcars$mpg,0.80)
 #' ci_median0(1:20)
 #' ci_median0(1:5)
 #' 
@@ -62,15 +60,13 @@ ci_median0=function(x,conf.level=0.95,tol=0.01) {
 #' @author Ken Butler, \email{butler@utsc.utoronto.ca}
 #' 
 #' @examples 
-#' ci_median(mtcars,mpg)
-#' ci_median(mtcars,mpg,0.80)
 #' d=data.frame(z=1:20)
 #' d1=data.frame(z=1:5)
 #' ci_median(d,z)
 #' ci_median(d1,z)
 #' 
 #' @importFrom purrr map_dbl
-#' 
+#' @importFrom rlang enquo
 #'
 #' @export
 #' 

@@ -11,6 +11,7 @@
 #' 
 #' @importFrom stats dbinom
 #' @importFrom stats median
+#' @importFrom datasets mtcars
 #' @export
 #' 
 median_test0 <-
@@ -43,6 +44,8 @@ median_test0 <-
 #' 
 #' @importFrom stats dbinom
 #' @importFrom stats median
+#' @importFrom datasets mtcars
+#' @importFrom rlang enquo
 #' @export
 #' 
 median_test <-

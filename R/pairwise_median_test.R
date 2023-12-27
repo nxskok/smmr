@@ -12,6 +12,8 @@
 #' pairwise_median_test(mtcars,mpg,cyl)
 #' 
 #' @importFrom stats median
+#' @importFrom datasets mtcars
+#' @importFrom rlang enquo
 #' @export
 #' 
 pairwise_median_test <-
@@ -57,6 +59,8 @@ pairwise_median_test <-
 #' median_test_pair(mtcars,mpg,cyl,4,8)
 #' 
 #' @importFrom stats median
+#' @importFrom datasets mtcars
+#' @importFrom rlang enquo
 #' @export
 #' 
 median_test_pair = function(d,x,g,g1,g2,tol=1e-6) {
