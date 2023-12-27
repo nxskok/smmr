@@ -7,7 +7,7 @@
 #' @author Ken Butler, \email{butler@utsc.utoronto.ca}
 #' 
 #' @examples
-#' median_test0(mtcars$mpg,mtcars$cyl)
+#' median_test0(datasets::mtcars$mpg,datasets::mtcars$cyl)
 #' 
 #' @importFrom stats dbinom
 #' @importFrom stats median
@@ -38,7 +38,7 @@ median_test0 <-
 #' @author Ken Butler, \email{butler@utsc.utoronto.ca}
 #' 
 #' @examples
-#' median_test(mtcars,mpg,cyl)
+#' median_test(datasets::mtcars,mpg,cyl)
 #' d=data.frame(z=1:9,gg=c(1,1,1,1,1,2,2,2,2))
 #' median_test(d,z,gg)
 #' 

@@ -22,7 +22,7 @@ list of 2 objects: table, counts of values above and below the grand median in e
 Mood's median test for comparison of group medians
 }
 \examples{
-median_test(mtcars,mpg,cyl)
+median_test(datasets::mtcars,mpg,cyl)
 d=data.frame(z=1:9,gg=c(1,1,1,1,1,2,2,2,2))
 median_test(d,z,gg)
 

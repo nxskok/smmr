@@ -64,6 +64,7 @@ ci_median0=function(x,conf.level=0.95,tol=0.01) {
 #' d1=data.frame(z=1:5)
 #' ci_median(d,z)
 #' ci_median(d1,z)
+#' ci_median(datasets::mtcars, mpg)
 #' 
 #' @importFrom purrr map_dbl
 #' @importFrom rlang enquo
