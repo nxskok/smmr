@@ -22,7 +22,19 @@ Sign and Mood's Median Test in R
 
 ## Installation
 
-You can install `smmr` from [GitHub](https://github.com/) with:
+`smmr` can be found on r-universe:
+
+```{r}
+options(repos = c(
+  ken = 'https://nxskok.r-universe.dev',
+  CRAN = 'https://cloud.r-project.org'
+))
+install.packages("smmr")
+```
+
+
+
+You can also install `smmr` from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")

@@ -4,14 +4,23 @@
 # smmr
 
 <!-- badges: start -->
-
 <!-- badges: end -->
 
 Sign and Mood’s Median Test in R
 
 ## Installation
 
-You can install `smmr` from [GitHub](https://github.com/) with:
+`smmr` can be found on r-universe:
+
+``` r
+options(repos = c(
+  ken = 'https://nxskok.r-universe.dev',
+  CRAN = 'https://cloud.r-project.org'
+))
+install.packages("smmr")
+```
+
+You can also install `smmr` from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
@@ -29,18 +38,20 @@ Consider the `disp` values from the `mtcars` data set:
 
 ``` r
 library(tidyverse)
-#> ── Attaching packages ────────────────────────────────────────────────────────────────────────────────────────────── tidyverse 1.3.0 ──
-#> ✓ ggplot2 3.3.0           ✓ purrr   0.3.4      
-#> ✓ tibble  3.0.1           ✓ dplyr   0.8.99.9002
-#> ✓ tidyr   1.0.2           ✓ stringr 1.4.0      
-#> ✓ readr   1.3.1           ✓ forcats 0.5.0
-#> ── Conflicts ───────────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
-#> x dplyr::filter() masks stats::filter()
-#> x dplyr::lag()    masks stats::lag()
+#> ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+#> ✔ dplyr     1.1.2     ✔ readr     2.1.4
+#> ✔ forcats   1.0.0     ✔ stringr   1.5.0
+#> ✔ ggplot2   3.4.2     ✔ tibble    3.2.1
+#> ✔ lubridate 1.9.2     ✔ tidyr     1.3.0
+#> ✔ purrr     1.0.1     
+#> ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+#> ✖ dplyr::filter() masks stats::filter()
+#> ✖ dplyr::lag()    masks stats::lag()
+#> ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
 ggplot(mtcars, aes(x=disp)) + geom_histogram(bins=5)
 ```
 
-<img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
 
 This distribution is skewed to the right, and we might be hesitant about
 using a t-test for the mean.
@@ -96,6 +107,9 @@ the same for all numbers of cylinders?
 
 ``` r
 median_test(mtcars, disp, cyl)
+#> $grand_median
+#> [1] 196.3
+#> 
 #> $table
 #>      above
 #> group above below
@@ -117,7 +131,7 @@ using Bonferroni:
 
 ``` r
 pairwise_median_test(mtcars, disp, cyl)
-#> # A tibble: 3 x 4
+#> # A tibble: 3 × 4
 #>      g1    g2    p_value adj_p_value
 #>   <dbl> <dbl>      <dbl>       <dbl>
 #> 1     4     6 0.000713    0.00214   
