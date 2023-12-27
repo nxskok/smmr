@@ -44,6 +44,7 @@ median_test0 <-
 #' @importFrom stats dbinom
 #' @importFrom stats median
 #' @importFrom rlang enquo
+#' @importFrom dplyr summarize
 #' @export
 #' 
 median_test <-

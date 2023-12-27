@@ -13,6 +13,10 @@
 #' 
 #' @importFrom stats median
 #' @importFrom rlang enquo
+#' @importFrom dplyr arrange
+#' @importFrom dplyr distinct
+#' @importFrom tidyr crossing
+#' @importFrom purrr map2_dbl
 #' @export
 #' 
 pairwise_median_test <-
@@ -59,6 +63,7 @@ pairwise_median_test <-
 #' 
 #' @importFrom stats median
 #' @importFrom rlang enquo
+#' @importFrom purrr pluck
 #' @export
 #' 
 median_test_pair = function(d,x,g,g1,g2,tol=1e-6) {

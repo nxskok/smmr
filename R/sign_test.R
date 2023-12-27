@@ -13,6 +13,10 @@
 #' sign_test(d,z,3)
 #' sign_test(datasets::mtcars, mpg, 25)
 #' @importFrom rlang enquo
+#' @importFrom dplyr count
+#' @importFrom dplyr mutate
+#' @importFrom dplyr filter
+#' @importFrom rlang "!!"
 #' @export
 #' 
 sign_test=function(d,x,med0=0,tol=1e-6) {
