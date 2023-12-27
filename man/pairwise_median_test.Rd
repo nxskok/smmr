@@ -22,7 +22,7 @@ data frame of groups being compared and unadjusted and Bonferroni-adjusted P-val
 Pairwise Mood's median tests for all comparison of pairs of group medians
 }
 \examples{
-pairwise_median_test(mtcars,mpg,cyl)
+pairwise_median_test(datasets::mtcars,mpg,cyl)
 
 }
 \author{

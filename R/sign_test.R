@@ -11,8 +11,7 @@
 #' d=data.frame(z=1:10)
 #' sign_test(d,z,3.5)
 #' sign_test(d,z,3)
-#' sign_test(mtcars,mpg,25)
-#' @importFrom datasets mtcars
+#' sign_test(datasets::mtcars, mpg, 25)
 #' @importFrom rlang enquo
 #' @export
 #' 

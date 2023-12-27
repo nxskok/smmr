@@ -10,9 +10,8 @@
 #' d=data.frame(z=1:10)
 #' pval_sign(3.5,d,z)
 #' pval_sign(3,d,z)
-#' pval_sign(25,mtcars,mpg)
+#' pval_sign(25, datasets::mtcars, mpg)
 #' 
-#' @importFrom datasets mtcars
 #' @importFrom rlang enquo
 #' @export
 #' 
@@ -32,8 +31,7 @@ pval_sign=function(med0,d,x) {
 #' @examples 
 #' pval_sign0(3.5,1:10)
 #' pval_sign0(3,1:10)
-#' pval_sign0(25,mtcars$mpg)
-#' @importFrom datasets mtcars
+#' pval_sign0(25, datasets::mtcars$mpg)
 #' @export
 #' 
 

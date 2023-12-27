@@ -10,6 +10,8 @@ ci_median0(x, conf.level = 0.95, tol = 0.01)
 \item{x}{vector of data}
 
 \item{conf.level}{level for CI (as decimal), default 95 percent}
+
+\item{tol}{ends of CI determined to within this accuracy, default 0.01}
 }
 \value{
 lower and upper limits

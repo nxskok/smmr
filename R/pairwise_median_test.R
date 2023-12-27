@@ -9,10 +9,9 @@
 #' @author Ken Butler, \email{butler@utsc.utoronto.ca}
 #' 
 #' @examples
-#' pairwise_median_test(mtcars,mpg,cyl)
+#' pairwise_median_test(datasets::mtcars,mpg,cyl)
 #' 
 #' @importFrom stats median
-#' @importFrom datasets mtcars
 #' @importFrom rlang enquo
 #' @export
 #' 
@@ -56,10 +55,9 @@ pairwise_median_test <-
 #' @author Ken Butler, \email{butler@utsc.utoronto.ca}
 #' 
 #' @examples
-#' median_test_pair(mtcars,mpg,cyl,4,8)
+#' median_test_pair(datasets::mtcars,mpg,cyl,4,8)
 #' 
 #' @importFrom stats median
-#' @importFrom datasets mtcars
 #' @importFrom rlang enquo
 #' @export
 #' 

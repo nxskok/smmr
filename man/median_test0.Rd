@@ -18,7 +18,7 @@ list of 3 objects: grand median of all obs, table, counts of values above and be
 Mood's median test for comparison of group medians
 }
 \examples{
-median_test0(mtcars$mpg,mtcars$cyl)
+median_test0(datasets::mtcars$mpg,datasets::mtcars$cyl)
 
 }
 \author{

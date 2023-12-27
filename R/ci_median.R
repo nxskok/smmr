@@ -2,6 +2,7 @@
 #' 
 #' @param x vector of data 
 #' @param conf.level level for CI (as decimal), default 95 percent
+#' @param tol ends of CI determined to within this accuracy, default 0.01
 #' @return lower and upper limits
 #' 
 #' @author Ken Butler, \email{butler@utsc.utoronto.ca}
@@ -68,6 +69,7 @@ ci_median0=function(x,conf.level=0.95,tol=0.01) {
 #' 
 #' @importFrom purrr map_dbl
 #' @importFrom rlang enquo
+#' @importFrom magrittr "%>%"
 #'
 #' @export
 #' 

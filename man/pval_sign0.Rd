@@ -20,7 +20,7 @@ Two-sided P-value for sign test
 \examples{
 pval_sign0(3.5,1:10)
 pval_sign0(3,1:10)
-pval_sign0(25,mtcars$mpg)
+pval_sign0(25, datasets::mtcars$mpg)
 }
 \author{
 Ken Butler, \email{butler@utsc.utoronto.ca}

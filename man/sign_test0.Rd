@@ -22,7 +22,7 @@ Sign test (simplified) for given median
 \examples{
 sign_test0(1:10,3.5)
 sign_test0(1:10,3)
-sign_test0(mtcars$mpg,25)
+sign_test0(datasets::mtcars$mpg,25)
 
 }
 \author{

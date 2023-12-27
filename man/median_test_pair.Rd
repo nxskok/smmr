@@ -26,7 +26,7 @@ median_test_pair(d, x, g, g1, g2, tol = 1e-06)
 Mood's median tests for one pair of groups
 }
 \examples{
-median_test_pair(mtcars,mpg,cyl,4,8)
+median_test_pair(datasets::mtcars,mpg,cyl,4,8)
 
 }
 \author{

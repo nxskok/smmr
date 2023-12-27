@@ -23,7 +23,7 @@ Two-sided P-value for sign test
 d=data.frame(z=1:10)
 pval_sign(3.5,d,z)
 pval_sign(3,d,z)
-pval_sign(25,mtcars,mpg)
+pval_sign(25, datasets::mtcars, mpg)
 
 }
 \author{
