@@ -69,7 +69,7 @@ ci_median0=function(x,conf.level=0.95,tol=0.01) {
 #' 
 #' @importFrom purrr map_dbl
 #' @importFrom rlang enquo
-#' @importFrom magrittr "%>%"
+#' @importFrom magrittr %>%
 #' @importFrom dplyr pull
 #' @export
 #' 
