@@ -20,9 +20,9 @@ P-value of two-sided sign test for median
 Two-sided P-value for sign test
 }
 \examples{
-d=data.frame(z=1:10)
-pval_sign(3.5,d,z)
-pval_sign(3,d,z)
+d <- data.frame(z = 1:10)
+pval_sign(3.5, d, z)
+pval_sign(3, d, z)
 pval_sign(25, datasets::mtcars, mpg)
 
 }

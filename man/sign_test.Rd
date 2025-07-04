@@ -22,9 +22,9 @@ list of two elements: table of values above and below null median, data frame of
 Sign test for given median
 }
 \examples{
-d=data.frame(z=1:10)
-sign_test(d,z,3.5)
-sign_test(d,z,3)
+d <- data.frame(z = 1:10)
+sign_test(d, z, 3.5)
+sign_test(d, z, 3)
 sign_test(datasets::mtcars, mpg, 25)
 }
 \author{

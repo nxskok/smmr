@@ -18,8 +18,8 @@ P-value of two-sided sign test for median
 Two-sided P-value for sign test
 }
 \examples{
-pval_sign0(3.5,1:10)
-pval_sign0(3,1:10)
+pval_sign0(3.5, 1:10)
+pval_sign0(3, 1:10)
 pval_sign0(25, datasets::mtcars$mpg)
 }
 \author{

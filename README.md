@@ -4,6 +4,7 @@
 # smmr
 
 <!-- badges: start -->
+
 <!-- badges: end -->
 
 Sign and Mood’s Median Test in R
@@ -14,8 +15,8 @@ Sign and Mood’s Median Test in R
 
 ``` r
 options(repos = c(
-  ken = 'https://nxskok.r-universe.dev',
-  CRAN = 'https://cloud.r-project.org'
+  ken = "https://nxskok.r-universe.dev",
+  CRAN = "https://cloud.r-project.org"
 ))
 install.packages("smmr")
 ```
@@ -39,19 +40,20 @@ Consider the `disp` values from the `mtcars` data set:
 ``` r
 library(tidyverse)
 #> ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-#> ✔ dplyr     1.1.2     ✔ readr     2.1.4
-#> ✔ forcats   1.0.0     ✔ stringr   1.5.0
-#> ✔ ggplot2   3.4.2     ✔ tibble    3.2.1
-#> ✔ lubridate 1.9.2     ✔ tidyr     1.3.0
-#> ✔ purrr     1.0.1     
+#> ✔ dplyr     1.1.4     ✔ readr     2.1.5
+#> ✔ forcats   1.0.0     ✔ stringr   1.5.1
+#> ✔ ggplot2   3.5.2     ✔ tibble    3.3.0
+#> ✔ lubridate 1.9.4     ✔ tidyr     1.3.1
+#> ✔ purrr     1.0.4     
 #> ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
 #> ✖ dplyr::filter() masks stats::filter()
 #> ✖ dplyr::lag()    masks stats::lag()
 #> ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
-ggplot(mtcars, aes(x=disp)) + geom_histogram(bins=5)
+ggplot(mtcars, aes(x = disp)) +
+  geom_histogram(bins = 5)
 ```
 
-<img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
 
 This distribution is skewed to the right, and we might be hesitant about
 using a t-test for the mean.
