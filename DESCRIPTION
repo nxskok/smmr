@@ -8,7 +8,7 @@ Maintainer: Ken Butler <butler@utsc.utoronto.ca>
 Description: Provides alternatives to t-test and two-sample t / ANOVA when normality is questionable. 
 License: GPL-2
 Encoding: UTF-8
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.2
 Imports: purrr, 
           rlang, 
           magrittr, 
